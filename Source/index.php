@@ -1,6 +1,8 @@
 <?php
 include 'Function/funkce.php';
+include 'connect.php';
 ?>
-<a href="helpdesk_form.php">Helpdesk</a> <br>
-<a href="generatePDF.php">PDF</a>
+
+<a href='login.php'> Login </a>
+
  
