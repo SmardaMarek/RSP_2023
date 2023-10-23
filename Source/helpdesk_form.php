@@ -1,9 +1,11 @@
 <?php 
-if (isset($_GET['status']) && $_GET['status'] === 'success') {
-    echo '<div class="alert" onclick="closeAlert()">
-    <span class="closebtn">&times;</span> 
-    <strong>Úspěšně odesláno!</strong>
-  </div>';
+include 'connect.php';
+session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = mysqli_real_escape_string($con, $_POST['name']);
+  $surname = mysqli_real_escape_string($con, $_POST['surname']);
+  $issue = mysqli_real_escape_string($con, $_POST['issue']);
+ //Todo: send data for processing 
 }  
 ?>
 <!DOCTYPE html>
@@ -21,20 +23,20 @@ if (isset($_GET['status']) && $_GET['status'] === 'success') {
         <i class="fas fa-at"></i>
         <i class="fas fa-mail-bulk"></i>
       </div>
-      <form method="post" action="Function/send-mail.php">
+      <form method="post">
         <h1>Napište nám</h1>
         <div class="info">
-          <input class="fname" type="text" name="name" placeholder="Jméno" required>
-          <input class="fname" type="text" name="surname" placeholder="Příjmení" required>
+          <input class="fname" type="text" name="name" id='name' placeholder="Jméno" required>
+          <input class="fname" type="text" name="surname" id="surname" placeholder="Příjmení" required>
         </div>
         <p>S čím můžeme pomoci?</p>
         <div>
-          <textarea type="text" name="issue" rows="4" required></textarea>
+          <textarea type="text" name="issue" id="issue" rows="4" required></textarea>
         </div>
         <button type="submit" name="send" >Odeslat</button>
       </form>
-      
     </div>
+    
   </body>
 </html>
 <script>
