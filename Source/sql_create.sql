@@ -50,3 +50,10 @@ CREATE TABLE helpdesk (
     datum_zalozeni DATETIME,
     stav VARCHAR(255)
 );
+
+CREATE TABLE casopis (
+    id_casopisu INT AUTO_INCREMENT PRIMARY KEY,
+    rok INT,
+    rocnik INT,
+    cislo INT
+);
