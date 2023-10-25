@@ -5,8 +5,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = mysqli_real_escape_string($con, $_POST['name']);
   $surname = mysqli_real_escape_string($con, $_POST['surname']);
   $issue = mysqli_real_escape_string($con, $_POST['issue']);
- //Todo: send data for processing 
-}  
+  $heading = mysqli_real_escape_string($con, $_POST['heading']);
+  $date = date("Y-m-d H:i:s");
+  $sql = "SELECT email FROM uzivatele WHERE jmeno = '$name' AND prijmeni = '$surname'";
+  $result = $con->query($sql);
+
+  // Ověření spojení s databází
+  if ($con->connect_error) {
+      die("Chyba připojení k databázi: " . $con->connect_error);
+  }
+  if ($result) {
+    // Získávání řádku s výsledky
+    $row = $result->fetch_assoc();
+
+    if ($row) {
+        $email = $row['email'];
+        $sql = "INSERT INTO helpdesk (email, predmet, popis, datum_zalozeni, stav) VALUES ('$email', '$heading', '$issue', '$date', 'Založeno')";
+      if ($con->query($sql) === TRUE) {
+            header('Location:index.php');
+        } 
+    } 
+    else {
+      echo '<script type="text/javascript">alert(\'Uživatel neexistuje\')</script>';
+      }
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <p>S čím můžeme pomoci?</p>
         <div>
+          <input class="fname" type="text" name="heading" id="heading" placeholder="Předmět" required>
           <textarea type="text" name="issue" id="issue" rows="4" required></textarea>
         </div>
         <button type="submit" name="send" >Odeslat</button>
