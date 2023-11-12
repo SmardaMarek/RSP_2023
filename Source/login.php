@@ -6,15 +6,19 @@ include 'connect.php';
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
+  <link rel="stylesheet" href="loginPage/styleLogin.css" />
 </head>
 <body>
-  <h1>Login page</h1>
+<div class="back">
   <form name="input" action="" method="post">
-    <label>Email:</label><input type="text" value="" id="email" name="email" />
-    <label>Heslo:</label><input type="password" value="" id="password" name="password" /><br><br>
-    <input type="submit" value="Přihlásit" name="sub" />
+  <img src="loginPage/image/text.png" alt="" /><br />
+   <input type="text" placeholder="Email" id="email" name="email" class="inputSize" />
+  <input type="password" placeholder="Heslo" id="password" name="password" class="inputSize"/><br><br>
+    <button type="submit" name="sub"/>Přihlásit</button>
   </form>
+</div>
 </body>
 </html>
 
