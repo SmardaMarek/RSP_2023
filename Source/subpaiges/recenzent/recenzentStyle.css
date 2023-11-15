@@ -1,0 +1,45 @@
+body{
+    background-color:#1b1f22;
+    color: #bc4242;
+    margin:0px;
+}
+
+.container{
+    width:1000px;
+    margin: 0 auto; 
+}
+
+th{
+    background-color: #bc4242;
+    color: #220e0e;
+}
+
+
+table,th,td{
+border: 1px #220e0e;
+border-style: solid;
+width: 750px;
+height: 40px;
+text-align: center;
+}
+
+img{
+    width: 15%;
+    padding-right: 550px;
+    padding-top: 10px;
+}
+
+button{
+border-radius: 15em;
+background-color: #bc4242;
+}
+
+hr{
+    width: 1000px;
+    background-color: #bc4242;
+    height: 1px;
+    border-radius: 2em;
+    border: none;
+}
+
+
