@@ -16,7 +16,9 @@ CREATE TABLE prispevky (
     soubor_docx LONGBLOB,
     text TEXT,
     stav VARCHAR(255),
-    FOREIGN KEY (autor) REFERENCES uzivatele(id_uzivatele)
+    id_casopisu INT,
+    FOREIGN KEY (autor) REFERENCES uzivatele(id_uzivatele),
+    FOREIGN KEY (id_casopisu) REFERENCES casopis(id_casopsiu)
 );
 
 CREATE TABLE recenze (
@@ -48,7 +50,8 @@ CREATE TABLE helpdesk (
     predmet VARCHAR(255),
     popis TEXT,
     datum_zalozeni DATETIME,
-    stav VARCHAR(255)
+    stav VARCHAR(255),
+    FOREIGN KEY (email) REFERENCES uzivatel(email)
 );
 
 CREATE TABLE casopis (
