@@ -13,7 +13,6 @@ CREATE TABLE prispevky (
     autor INT,
     tema VARCHAR(255),
     soubor_pdf LONGBLOB,
-    soubor_docx LONGBLOB,
     text TEXT,
     stav VARCHAR(255),
     id_casopisu INT,
