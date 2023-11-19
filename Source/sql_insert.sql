@@ -6,7 +6,7 @@ VALUES
     ('Karolína', 'Kučerová', 'karolina.kucerova@gmail.com', 'heslo4', 'šéfredaktor'),
     ('Tomáš', 'Procházka', 'tomas.prochazka@gmail.com', 'heslo5', 'admin');
 
-INSERT INTO prispevky (nazev, autor, tema, text, stav)
+INSERT INTO prispevky (nazev, autor, tema, obsah_text, stav)
 VALUES
     ('Výzkum v oblasti kvantové fyziky', 1, 'Věda', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor metus ut quam lacinia.', ''),
     ('Nové technologie v informačním sektoru', 1, 'Technika', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor metus ut quam lacinia.', ''),

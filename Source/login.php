@@ -31,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 foreach ($statement as $row) {
     // Zpracujte data
    
-    if ($email == $row['email']) {
+    if ($email == $row['email'] && $password == $row['heslo']) {
       $role = $row['role'];
       switch ($role) {
           case 'autor':
-              header("Location: subpaiges/autor.php");
+            header("Location: subpaiges/autor/autor.php");
               break;
           case 'recenzent':
               header("Location: subpaiges/recenzent.php");
@@ -53,6 +53,7 @@ foreach ($statement as $row) {
               echo 'Neco se nepovedlo.';
       }
   }
+  } 
 }
-}
+
  ?>

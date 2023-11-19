@@ -13,7 +13,7 @@ CREATE TABLE prispevky (
     autor INT,
     tema VARCHAR(255),
     soubor_pdf LONGBLOB,
-    text TEXT,
+    obsah_text TEXT,
     stav VARCHAR(255),
     id_casopisu INT,
     FOREIGN KEY (autor) REFERENCES uzivatele(id_uzivatele),

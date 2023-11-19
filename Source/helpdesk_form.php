@@ -56,8 +56,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>S čím můžeme pomoci?</p>
         <div>
           <input class="fname" type="text" name="heading" id="heading" placeholder="Předmět" required>
-          <textarea type="text" name="issue" id="issue" rows="4" required></textarea>
+          <textarea type="text" name="issue" id="issue" rows="4" placeholder="Problém" required></textarea>
         </div>
+
         <button type="submit" name="send" >Odeslat</button>
       </form>
     </div>
