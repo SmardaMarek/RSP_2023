@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $file_name = $_FILES['pdf_file']['name'];
               $file_tmp = $_FILES['pdf_file']['tmp_name'];
           
-              if (move_uploaded_file($file_tmp, "../pdf/" . $file_name)) {
+              if (move_uploaded_file($file_tmp, "./pdf/" . $file_name)) {
                   $sql_insert = "INSERT INTO prispevky (nazev, autor, tema, soubor_pdf, obsah_text, stav) VALUES ('$heading', '$id_autora', '$theme','$file_name', '$content', 'Odesláno k recenzi')";
                   $result = mysqli_query($con, $sql_insert);
 
