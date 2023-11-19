@@ -35,19 +35,19 @@ foreach ($statement as $row) {
       $role = $row['role'];
       switch ($role) {
           case 'autor':
-            header("Location: subpaiges/autor/autor.php");
+            header("Location: subpages/autor/autor.php");
               break;
           case 'recenzent':
-              header("Location: subpaiges/recenzent.php");
+              header("Location: subpages/recenzent.php");
               break;
           case 'redaktor':
-              header("Location: subpaiges/redaktor.php");
+              header("Location: subpages/redaktor.php");
               break;
           case 'sefredaktor':
-              header("Location: subpaiges/sefredaktor.php");
+              header("Location: subpages/sefredaktor.php");
               break;
           case 'admin':
-              header("Location: subpaiges/admin.php");
+              header("Location: subpages/admin.php");
               break;
           default:
               echo 'Neco se nepovedlo.';
