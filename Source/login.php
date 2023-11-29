@@ -35,10 +35,10 @@ foreach ($statement as $row) {
       $role = $row['role'];
       switch ($role) {
           case 'autor':
-            header("Location: subpages/autor/autor.php");
+            header("Location: subpages/autor/autor.php?id=" . $row['id_uzivatele']);
               break;
           case 'recenzent':
-              header("Location: subpages/recenzent.php");
+              header("Location: subpages/recenzent.php?id=". $row['id_uzivatele']);
               break;
           case 'redaktor':
               header("Location: subpages/redaktor.php");
