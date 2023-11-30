@@ -1,7 +1,7 @@
 <?php
 include '../connect.php';
 $id_uzivatele = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$sql = "SELECT * FROM prispevky WHERE id_recenzenta = '$id_uzivatele' AND stav = 'Odesláno k recenzi'";
+$sql = "SELECT * FROM prispevky WHERE id_recenzenta = '$id_uzivatele' AND stav = 'Posláno recenzentovi'";
 $result = $con->query($sql);
 
 ?>
