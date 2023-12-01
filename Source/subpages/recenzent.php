@@ -10,15 +10,26 @@ $result = $con->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./autorStyle.css">
+    <link rel="stylesheet" href="./recenzent/recenzentStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
+    <link rel="icon" type="image/x-icon" href="./recenzent/fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
-    <title>| Recentent</title>
+<title>| Recenzent</title>
 </head>
 <body>
-<h3>Clanky k recenzi</h3>
+<center>
+   <div class="container">
+      <div>
+         <img src="./autor/text.png" alt="">
+   Jste přihlášen jako <b>recenzent</b>
+   <a href="../index.php">Odhlásit</a>
+</div>
+   <hr>
+    <h1>Články k recenzi</h1>
+    <hr>
+    <br>
+    <div style="overflow-x:auto;">
 <table border="1">
     <tr>
         <th>Autor</th>
@@ -39,5 +50,4 @@ $result = $con->query($sql);
     <?php }; ?>
 </table>
 <br>
-<a href="../index.php">Odhlásit</a>
 </html>

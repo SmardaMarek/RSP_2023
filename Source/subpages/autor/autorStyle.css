@@ -33,7 +33,7 @@ button:hover{
    color: white;
     }
 
-.add{
+.add,.exit{
     width: 150px;
     height: 35px;
     background-color: transparent;
@@ -41,6 +41,13 @@ button:hover{
     color: #bc4242;
     border-style: solid;
     border-radius: 0.8em;
+}
+
+.exit{
+    margin-right: 950px;
+    margin-top: -50px;
+    z-index: -1;
+    width: 50px;
 }
 
  .add:hover{
@@ -103,6 +110,35 @@ select{
     border-radius: 0.8em;
     border-color: #bc4242;
 }
+
+.autorN, textarea{
+    width: 150px;
+    border-radius: 0.8em;
+}
+
+::placeholder{
+    padding-left: 5px;
+}
+
+.frame{
+    width: 450px;
+    height: 425px;
+    background-color: #1b1f22;
+    border-radius: 1em;
+    border: 2px solid;
+    border-color: #bc4242;
+}
+
+input,textarea{
+    margin-bottom: 5px;
+}
+
+textarea{
+    margin-top: 5px;
+}
+
+
+
 
 
 

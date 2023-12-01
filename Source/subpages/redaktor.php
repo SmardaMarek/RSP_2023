@@ -26,13 +26,24 @@ $result1 = $con->query($sql1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./autorStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
+    <link rel="stylesheet" href="./recenzent/recenzentStyle.css">
+    <link rel="icon" type="image/x-icon" href="./recenzent/fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
-    <title>| Recentent</title>
+<title>| Redaktor</title>
 </head>
 <body>
-        <h3>Nově podané články</h3>
+   <center>
+   <div class="container">
+      <div>
+      <img src="./autor/text.png" alt="">
+   Jste přihlášen jako <b>redaktor</b>
+   <a href="../index.php">Odhlásit</a>
+</div>
+    <hr>
+    <br>
+    <div style="overflow-x:auto;">
+        <h1>Nově podané články</h1>
         <table border="1">
             <tr>
                 <th>Název</th>
@@ -68,8 +79,8 @@ $result1 = $con->query($sql1);
                 }
             ?>
         </table>
-
-<h3>Stav článků</h3>
+<hr>
+<h1>Stav článků</h1>
 <table border="1">
         <tr>
             <th>Název</th>
@@ -93,6 +104,6 @@ $result1 = $con->query($sql1);
         ?>
 </table>
 <br>
-<a href="../index.php">Odhlásit</a>
+<hr>
 </body>
 </html>

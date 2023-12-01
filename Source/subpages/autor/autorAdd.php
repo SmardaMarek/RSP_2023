@@ -59,23 +59,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    <img src="./text.png" alt="">
    Jste přihlášen jako <b>autor</b>
    <a  href="../../index.php">Odhlásit</a> <br>
-   <a  href="./autor.php">Zpět</a>
 </div>
    <hr>
       <form method="post" enctype="multipart/form-data">
          <h1>Přidání příspěvku</h1>
+          <div class="frame">
          <div class="info">
-           <input  type="text" name="name" id='name' placeholder="Jméno autora" required>
-           <input  type="text" name="surname" id="surname" placeholder="Příjmení autora" required>
+         <h2 style="margin-bottom: 10px;margin-top: 10px;">Autor</h2>
+      <hr style="width: 10%;">
+           <input class="autorN" type="text" name="name" id='name' placeholder="Jméno autora" required><br>
+           <input class="autorN" type="text" name="surname" id="surname" placeholder="Příjmení autora" required>
          </div>
          <div>
-         <h4>Obsah příspěvku</h4>
-           <select name="theme" id="theme" required>
+         <h2 style="margin-bottom: 10px;">Příspěvek</h2>
+      <hr style="width: 10%;">
+      <input class="autorN" type="text" name="heading" id="heading" placeholder="Název příspěvku" required><br>
+           Téma<select name="theme" id="theme" required>
             <option value="IT" selected="selected">IT</option>
             <option value="CR">Cestovní ruch</option>
             <option value="EK">Ekonomie</option>
-            </select> <br> <br>
-           <input  type="text" name="heading" id="heading" placeholder="Název příspěvku" required><br><br>
+            </select> <br>
            <textarea type="text" name="content" id="content" rows="4" placeholder="Obsah příspěvku" required></textarea>
          </div>
          <div>
@@ -83,15 +86,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            <input type="file" name="pdf_file" id="pdf_file" accept=".pdf" title="Nahrání PDF"/>
          </div>
          <br>
+         </div><br>
+         <a class="exit" href="./autor.php">Zpět</a>
          <hr>
     <br>
     <div style="overflow-x:auto;">
     
-       <button class="add" type="submit" name="send">Přidat článek</button>
+       <button class="add" type="submit" name="send">Přidat příspěvek</button>
       </div>
    </div> 
        </form>
-   
    <br>
 </center>
 </body>
