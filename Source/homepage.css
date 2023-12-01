@@ -65,7 +65,7 @@ body{
 
 .logo{
     margin-top: -5px;
-    background-image: url(HokusPokus3.png);
+    background-image: url(\RSP_2023\Grafika\banner.png);
     height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -201,7 +201,7 @@ body{
 
 .catalogs-separate{
     margin-top: -5px;
-    background-image: url(casopis2.png);
+    background-image: url(\RSP_2023\Grafika\casopis.png);
     height: 450px;
     width: 320px;
     background-repeat: no-repeat;
