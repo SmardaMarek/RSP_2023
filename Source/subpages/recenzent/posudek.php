@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./recenzentStyle.css">
+    <link rel="stylesheet" href="posudek.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>| Recentent</title>
 </head>
 <body>
-<h3>Recenzní formulář</h3>
+<div class="container">
+   <img src="./text.png" alt="" class="img">
+   
+</div>
+<div class="logout">
+<a> Jste přihlášen jako <b>autor</b></a> <br>
+<a  href="../../index.php">Odhlásit</a> <br>
+<a  href="./autor.php">Zpět</a>
+</div>
+<hr>
+<h3 class="text-center">Recenzní formulář</h3>
+<div class="posudek">
 <form method="post">
         <label for="hodnoceni1">Aktuálnost</label>
         <input type="number" name="aktualnost" id="aktualnost" min="1" max="5" required><br><br>
@@ -63,5 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Odeslat hodnocení</button>
     </form>
+   
+</div>
+<hr>
 </body>
 </html>
