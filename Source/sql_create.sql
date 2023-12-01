@@ -15,6 +15,7 @@ CREATE TABLE prispevky (
     soubor_pdf LONGBLOB,
     obsah_text TEXT,
     stav VARCHAR(255),
+    id_recenzenta INT,
     id_casopisu INT,
     FOREIGN KEY (autor) REFERENCES uzivatele(id_uzivatele),
     FOREIGN KEY (id_casopisu) REFERENCES casopis(id_casopisu)
@@ -59,5 +60,3 @@ CREATE TABLE casopis (
     rocnik INT,
     cislo INT
 );
-ALTER TABLE prispevky
-ADD id_recenzenta INT;
