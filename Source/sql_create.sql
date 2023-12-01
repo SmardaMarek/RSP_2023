@@ -17,7 +17,7 @@ CREATE TABLE prispevky (
     stav VARCHAR(255),
     id_casopisu INT,
     FOREIGN KEY (autor) REFERENCES uzivatele(id_uzivatele),
-    FOREIGN KEY (id_casopisu) REFERENCES casopis(id_casopsiu)
+    FOREIGN KEY (id_casopisu) REFERENCES casopis(id_casopisu)
 );
 
 CREATE TABLE recenze (
@@ -59,3 +59,5 @@ CREATE TABLE casopis (
     rocnik INT,
     cislo INT
 );
+ALTER TABLE prispevky
+ADD id_recenzenta INT;

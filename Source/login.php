@@ -38,7 +38,7 @@ foreach ($statement as $row) {
             header("Location: subpages/autor/autor.php?id=" . $row['id_uzivatele']);
               break;
           case 'recenzent':
-              header("Location: subpages/recenzent.php?id=". $row['id_uzivatele']);
+              header("Location: subpages/recenzent/recenzent.php?id=". $row['id_uzivatele']);
               break;
           case 'redaktor':
               header("Location: subpages/redaktor.php");

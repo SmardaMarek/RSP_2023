@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   $result2 = mysqli_query($con, $sql_update);
                   if($result && $result2){
                     echo "<script>alert('Rececenze úspěšná!');</script>";
-                    header("Location: ../recenzent.php");
+                    header("Location: ../recenzent/recenzent.php");
                   }
 }
 ?>
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./autorStyle.css">
+    <link rel="stylesheet" href="./recenzentStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

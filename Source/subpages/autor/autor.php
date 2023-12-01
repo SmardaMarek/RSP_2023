@@ -16,7 +16,7 @@
       <div>
    <img src="./text.png" alt="">
    Jste přihlášen jako <b>autor</b>
-   <button>Odhlásit se</button>
+   <a  href="../../index.php">Odhlásit</a> <br>
 </div>
    <hr>
     <h1>Mé příspěvky</h1>
