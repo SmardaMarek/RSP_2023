@@ -14,7 +14,7 @@
                 <input type="text" class="input" placeholder="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
             </div>
-            <a href="\login.php" style="margin-top: auto; margin-bottom: auto; display: flex; margin-inline: auto;"><div class="login"><div class="login-text">Login</div></div></a>
+            <a href="/RSP_2023/source/login.php" style="margin-top: auto; margin-bottom: auto; display: flex; margin-inline: auto;"><div class="login"><div class="login-text">Login</div></div></a>
         </div>
         <div id="#home" class="logo"><img></div>
         <div class="content">
