@@ -39,43 +39,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
-    <title>| Recentent</title>
+    <title>| Recenzent - posudek</title>
 </head>
 <body>
 <div class="container">
-   <img src="./text.png" alt="" class="img">
-   
-</div>
-<div class="logout">
-<a> Jste přihlášen jako <b>autor</b></a> <br>
-<a  href="../../index.php">Odhlásit</a> <br>
-<a  href="./autor.php">Zpět</a>
+      <div>
+   <img src="./text.png" alt="">
+   Jste přihlášen jako <b>recenzent</b>
+   <a  href="../../index.php">Odhlásit</a> <br>
 </div>
 <hr>
-<h3 class="text-center">Recenzní formulář</h3>
+<h1 class="text-center">Recenzní formulář</h1>
 <div class="posudek">
+<div class="frame">
+    <br>
 <form method="post">
-        <label for="hodnoceni1">Aktuálnost</label>
-        <input type="number" name="aktualnost" id="aktualnost" min="1" max="5" required><br><br>
+        <label for="hodnoceni1" style="margin-top: 10px;">Aktuálnost</label>
+        <input class="autorN" type="number" name="aktualnost" id="aktualnost" min="1" max="5" required><br><br>
 
         <label for="hodnoceni2">Zajímavost/Přínosnost</label>
-        <input type="number" name="zajimavost" id="zajimavost" min="1" max="5" required><br><br>
+        <input class="autorN" type="number" name="zajimavost" id="zajimavost" min="1" max="5" required><br><br>
 
         <label for="hodnoceni3">Originalita</label>
-        <input type="number" name="originalita" id="originalita" min="1" max="5" required><br><br>
+        <input class="autorN" type="number" name="originalita" id="originalita" min="1" max="5" required><br><br>
 
         <label for="hodnoceni4">Odborná úrověň</label>
-        <input type="number" name="uroven" id="uroven" min="1" max="5" required><br><br>
+        <input class="autorN" type="number" name="uroven" id="uroven" min="1" max="5" required><br><br>
 
         <label for="hodnoceni4">Jazyková a stylová úroveň</label>
-        <input type="number" name="styl" id="styl" min="1" max="5" required><br><br>
+        <input class="autorN" type="number" name="styl" id="styl" min="1" max="5" required><br><br>
         <label for="komentar">Vyjádření:</label>
-        <textarea name="vyjadreni" id="vyjadreni" rows="4" cols="50" required></textarea><br><br>
-
+        <textarea name="vyjadreni" id="vyjadreni" rows="4" cols="50" required></textarea><br><br><br><br>
         <button type="submit">Odeslat hodnocení</button>
+        </div>
     </form>
-   
-</div>
+    </div><br>
 <hr>
 </body>
 </html>

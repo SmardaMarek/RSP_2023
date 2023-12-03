@@ -23,7 +23,7 @@ $result = $con->query($sql);
       <div>
          <img src="../autor/text.png" alt="">
    Jste přihlášen jako <b>recenzent</b>
-   <a href="../index.php">Odhlásit</a>
+   <a href="../../index.php">Odhlásit</a>
 </div>
    <hr>
     <h1>Články k recenzi</h1>

@@ -35,3 +35,153 @@ button{
     border-color: #bc4242;
     color: #bc4242;
     }
+
+
+
+    /*-------------------------------------------*/
+    body{
+        background-color:#1b1f22;
+        color: #bc4242;
+        margin:0px;
+        font-family:'Roboto', Times, serif ;
+    }
+    
+    .fav{
+        height: 1%;
+    }
+    
+    .container{
+        width:1000px;
+        margin: 0 auto; 
+    }
+    
+    
+    img{
+        width: 15%;
+        padding-right: 550px;
+        padding-top: 10px;
+    }
+    
+    button{
+    border-radius: 15em;
+    background-color: transparent;
+    border-color: #bc4242;
+    color: #bc4242;
+    }
+    
+    button:hover{
+       border-color: gray;
+       color: white;
+        }
+    
+    .add,.exit{
+        width: 150px;
+        height: 35px;
+        background-color: transparent;
+        border-color: #bc4242;
+        color: #bc4242;
+        border-style: solid;
+        border-radius: 0.8em;
+    }
+    
+    .exit{
+        margin-right: 950px;
+        margin-top: -50px;
+        z-index: -1;
+        width: 50px;
+    }
+    
+     .add:hover{
+        border-color: gray;
+        color:white;
+    }
+    
+    hr{
+        width: 1000px;
+        background-color: #bc4242;
+        height: 1px;
+        border-radius: 2em;
+        border: none;
+    }
+    
+    /*---------------------------------------*/
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    
+    th{
+        background: linear-gradient(#bc4242, #220e0e);
+        color: #000;
+    }
+    
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+        text-align: center;
+    }
+    
+    /* Apply different styles for smaller screens */
+    @media screen and (max-width: 800px) {
+        table {
+            border: 0;
+        }
+    
+        th, td {
+            border: 1px solid #000;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    
+        /* Add some space between table cells for better readability on small screens */
+        td::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+        }
+    }
+    
+    select{
+        background-color: transparent;
+        color: #bc4242;
+        border-radius: 0.8em;
+        border-color: #bc4242;
+    }
+    
+    .autorN, textarea{
+        width: 50px;
+        border-radius: 0.8em;
+    }
+    
+    ::placeholder{
+        padding-left: 5px;
+    }
+    
+    .frame{
+        width: 450px;
+        height: 340px;
+        background-color: #1b1f22;
+        border-radius: 1em;
+        border: 2px solid;
+        border-color: #bc4242;
+    }
+    
+    input,textarea{
+        margin-bottom: 5px;
+    }
+    
+    textarea{
+        margin-top: 5px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
