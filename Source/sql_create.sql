@@ -7,6 +7,13 @@ CREATE TABLE uzivatele (
     role VARCHAR(255)
 );
 
+CREATE TABLE casopis (
+    id_casopisu INT AUTO_INCREMENT PRIMARY KEY,
+    rok INT,
+    rocnik INT,
+    cislo INT
+);
+
 CREATE TABLE prispevky (
     id_prispevku INT AUTO_INCREMENT PRIMARY KEY,
     nazev VARCHAR(255),
@@ -52,11 +59,4 @@ CREATE TABLE helpdesk (
     datum_zalozeni DATETIME,
     stav VARCHAR(255),
     FOREIGN KEY (email) REFERENCES uzivatel(email)
-);
-
-CREATE TABLE casopis (
-    id_casopisu INT AUTO_INCREMENT PRIMARY KEY,
-    rok INT,
-    rocnik INT,
-    cislo INT
 );
