@@ -15,7 +15,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["priradit"])) {
         }
 }
 
-$sql1 = "SELECT * FROM prispevky where stav != 'Odesláno k recenzi'";
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["vratitAutorovi"])) {
+    $id_prispevku = $_POST["id_prispevku"];
+    $sqlVratit = "UPDATE prispevky SET stav = 'Vráceno autorovi' WHERE id_prispevku = $id_prispevku";
+    $resultVratit = $con->query($sqlVratit);
+    if($result){
+        echo "<script>alert('Vráceno autorovi!');</script>";
+        header("Location: redaktor.php");
+        }
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["schvalit"])) {
+    $id_prispevku = $_POST["id_prispevku"];
+    $sqlVratit = "UPDATE prispevky SET stav = 'Schváleno' WHERE id_prispevku = $id_prispevku";
+    $resultVratit = $con->query($sqlVratit);
+    if($result){
+        echo "<script>alert('Schváleno!');</script>";
+        header("Location: redaktor.php");
+        }
+}
+
+$sql1 = "SELECT p.*, (r.aktualnost + r.zajimavost_prinosnost + r.originalita + r.odborna_uroven + r.jazykova_a_stylova_uroven) / 5 as prumer_hodnoceni FROM prispevky p left join recenze r on p.id_prispevku = r.id_prispevku where p.stav not in ('Odesláno k recenzi', 'Vráceno autorovi', 'Schváleno')";
 $result1 = $con->query($sql1);
 
 ?>
@@ -89,8 +109,11 @@ $result1 = $con->query($sql1);
             <th>Obsah</th>
             <th>Stav</th>
             <th>ID Recenzenta</th>
+            <th>Hodnocení</th>
+            <th>Vrátit</th>
+            <th>Schválit</th>
         </tr>
-        <?php 
+        <?php
             foreach ($result1 as $row) {
                 echo '<tr>';
                 echo '<td>' . $row["nazev"] . '</td>';
@@ -99,6 +122,19 @@ $result1 = $con->query($sql1);
                 echo '<td>' . $row["obsah_text"] . '</td>';
                 echo '<td>' . $row["stav"] . '</td>';
                 echo '<td>' . $row["id_recenzenta"] . '</td>';
+                echo '<td>' . round($row["prumer_hodnoceni"], 2) . '</td>';
+                echo '<td>';
+                echo '<form method="post">';
+                echo '<input type="hidden" name="id_prispevku" value="' . $row["id_prispevku"] . '">';
+                echo '<button type="submit" name="vratitAutorovi">Vrátit autorovi</button>';
+                echo '</form>';
+                echo '</td>';
+                echo '<td>';
+                echo '<form method="post">';
+                echo '<input type="hidden" name="id_prispevku" value="' . $row["id_prispevku"] . '">';
+                echo '<button type="submit" name="schvalit">Schválit</button>';
+                echo '</form>';
+                echo '</td>';
                 echo '</tr>';
             }
         ?>
