@@ -1,3 +1,10 @@
+<?php
+include '../../connect.php';
+$id_uzivatele = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$sql = "SELECT * FROM prispevky WHERE autor = '$id_uzivatele'";
+$result = $con->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +24,7 @@
    <img src="./text.png" alt="">
    Jste přihlášen jako <b>autor</b>
    <a  href="../../index.php">Odhlásit</a>
-   <a  href="../../index.php">Odhlásit</a> <br>
+   <br>
 </div>
    <hr>
     <h1>Mé příspěvky</h1>
@@ -25,46 +32,21 @@
     <br>
     <div style="overflow-x:auto;">
     <table>
+    <tr>
+        <th>Název</th>
+        <th>Téma</th>
+        <th>Text obsahu</th>
+        <th>Stav</th>
+    </tr>
+    <?php foreach ($result as $row){ ?>
         <tr>
-           <th>Téma</th>
-           <th>Název</th>
-           <th>Článek</th>
-           <th>Stav</th>
-           <th>Vytvořeno dne</th>
-           <th>Recenze</th>
+            <td><?php echo $row['nazev']; ?></td>
+            <td><?php echo $row['tema']; ?></td>
+            <td><?php echo $row['obsah_text']; ?></td>
+            <td><?php echo $row['stav']; ?></td>
+
         </tr>
-        <tr>
-           <td>IT</td>
-           <td>Distribuce Linuxu</td>
-           <td><button>Zobrazit článek</button></td>
-           <td>K recenzi</td>
-           <td>2023-12-15</td>
-           <td>0</td>
-        </tr>
-        <tr>
-         <td>Ekonomie</td>
-         <td>Daně</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>K recenzi</td>
-         <td>2023-12-10</td>
-         <td>0</td>
-      </tr>
-      <tr>
-         <td>IT</td>
-         <td>JavaScript</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>Hodnoceno</td>
-         <td>2023-11-27</td>
-         <td>2</td>
-      </tr>
-      <tr>
-         <td>Cestovní ruch</td>
-         <td>Amerika a její tradice</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>K recenzi</td>
-         <td>2023-12-20</td>
-         <td>0</td>
-      </tr>
+    <?php }; ?>
        </table>
        <a href="./autorAdd.php">
        <button class="add">Přidat článek</button>
@@ -73,14 +55,6 @@
    </div> 
    <br>
    <hr>
-   <h2>Téma</h2>
-   Vyberte téma, které chcete zobrazit: <br>
-   <select name="tema">
-      <option value="IT" selected="selected">IT</option>
-      <option value="CR">Cestovní ruch</option>
-      <option value="EK">Ekonomie</option>
-      </select>
-      <button>Zobraz</button>
 </center>
 </body>
 </html>
