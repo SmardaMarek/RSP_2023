@@ -47,9 +47,9 @@
                     <div class="red-line"> </div>
                 </div>
                 <div class="catalogs-years">
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=6"><div class="catalogs-separate"> </div></a></div>
                     <div style="margin-inline: auto;"><a href="generatePDF.php/?id=7"><div class="catalogs-separate"> </div></a></div>
                     <div style="margin-inline: auto;"><a href="generatePDF.php/?id=8"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=6"><div class="catalogs-separate"> </div></a></div>
                     <div style="margin-inline: auto;"><a href="generatePDF.php/?id=9"><div class="catalogs-separate"> </div></a></div>
                 </div>
             </div>
