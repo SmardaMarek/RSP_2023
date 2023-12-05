@@ -1,7 +1,7 @@
 <?php
 include '../../connect.php';
 $id_uzivatele = isset($_GET['id']) ? intval($_GET['id']) : 0;
-$sql = "SELECT * FROM prispevky WHERE autor = '$id_uzivatele'";
+$sql = "SELECT p.*, (r.aktualnost + r.zajimavost_prinosnost + r.originalita + r.odborna_uroven + r.jazykova_a_stylova_uroven) / 5 as prumer_hodnoceni FROM prispevky p left join recenze r on p.id_prispevku = r.id_prispevku WHERE p.autor = '$id_uzivatele'";
 $result = $con->query($sql);
 
 ?>
@@ -37,6 +37,7 @@ $result = $con->query($sql);
         <th>Téma</th>
         <th>Text obsahu</th>
         <th>Stav</th>
+        <th>Hodnocení</th>
     </tr>
     <?php foreach ($result as $row){ ?>
         <tr>
@@ -44,7 +45,7 @@ $result = $con->query($sql);
             <td><?php echo $row['tema']; ?></td>
             <td><?php echo $row['obsah_text']; ?></td>
             <td><?php echo $row['stav']; ?></td>
-
+            <td><?php echo round($row['prumer_hodnoceni'], 2); ?></td>
         </tr>
     <?php }; ?>
        </table>
