@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Úte 05. pro 2023, 22:23
+-- Vytvořeno: Úte 05. pro 2023, 22:54
 -- Verze serveru: 10.4.28-MariaDB
 -- Verze PHP: 8.2.4
 
@@ -34,7 +34,7 @@ INSERT INTO `casopis` (`id_casopisu`, `rok`, `rocnik`, `cislo`) VALUES
 (6, 2022, 2, 3),
 (7, 2022, 3, 1),
 (8, 2022, 3, 2),
-(9, 2022, 3, 3),
+(9, 2022, 3, 4),
 (10, 2023, 4, 1),
 (11, 2023, 4, 2),
 (12, 2023, 4, 3),

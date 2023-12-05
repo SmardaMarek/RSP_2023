@@ -47,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    <img src="./text.png" alt="">
    Jste přihlášen jako <b>recenzent</b>
    <a  href="../../index.php">Odhlásit</a> <br>
+   <a class="exit" onclick="history.back()">Zpět</a>
 </div>
 <hr>
 <h1 class="text-center">Recenzní formulář</h1>
