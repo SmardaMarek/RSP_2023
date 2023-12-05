@@ -6,22 +6,17 @@
     </head>
     <body>
         <div class="header">
-            <div onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'});" class="menu-link">Home</div>
-            <div onclick="document.querySelector('#sorting').scrollIntoView({behavior: 'smooth'});" class="menu-link">Sorting</div>
-            <div onclick="document.querySelector('#year2023').scrollIntoView({behavior: 'smooth'});" class="menu-link">Year 2023</div>
-            <div onclick="document.querySelector('#year2022').scrollIntoView({behavior: 'smooth'});" class="menu-link">Year 2022</div>
-            <div class="form-group search-box">
-                <input type="text" class="input" placeholder="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
-            <a href="/RSP_2023/source/login.php" style="margin-top: auto; margin-bottom: auto; display: flex; margin-inline: auto;"><div class="login"><div class="login-text">Login</div></div></a>
+            <div onclick="document.getElementById('#home').scrollIntoView({behavior: 'smooth'});" class="menu-link">Home</div>
+            <div onclick="document.getElementById('#sorting').scrollIntoView({behavior: 'smooth'});" class="menu-link">Sorting</div>
+            <div onclick="document.getElementById('#year2023').scrollIntoView({behavior: 'smooth'});" class="menu-link">Year 2023</div>
+            <div onclick="document.getElementById('#year2022').scrollIntoView({behavior: 'smooth'});" class="menu-link">Year 2022</div>
+            <a href="login.php" style="margin-top: auto; margin-bottom: auto; display: flex; margin-inline: auto; text-decoration: none;"><div class="login"><div class="login-text">Login</div></div></a>
         </div>
-        <div id="#home" class="logo"><img></div>
-        <div class="content">
-            */ <div class="text-box">
-                <div class="intro-text"> </div>
-                <div class="red-line"> </div>
-            </div> /*
+        <div id="#home" class="logo"></div>
+        <div class="content" style="margin-bottom: 20px;">
+                <div class="text-box">
+                <div class="intro-text" style="margin-bottom: 20px;"> </div>
+            </div>
             <div id="#sorting" class="sorting">
                 <div class="separate-sort-box">
                     <div class="sort-text">Téma 1</div>
@@ -42,20 +37,20 @@
                     <div class="red-line"> </div>
                 </div>
                 <div class="catalogs-years">
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=0"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=1"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=2"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=3"><div class="catalogs-separate"> </div></a></div>
                 </div>
                 <div id="#year2023" class="text-box">
                     <div class="intro-text">Rok 2022</div>
                     <div class="red-line"> </div>
                 </div>
                 <div class="catalogs-years">
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
-                    <div class="catalogs-separate"> </div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=4"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=5"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=6"><div class="catalogs-separate"> </div></a></div>
+                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=7"><div class="catalogs-separate"> </div></a></div>
                 </div>
             </div>
         </div>
