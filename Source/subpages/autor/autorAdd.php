@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          </div>
          <br>
          </div><br>
-         <a class="exit" href="./autor.php">Zpět</a>
+         <a class="exit" onclick="history.back()">Zpět</a>
          <hr>
     <br>
     <div style="overflow-x:auto;">
