@@ -17,6 +17,7 @@ class PDF extends FPDF {
 		$this->Cell(-100); 
 		
 		// Header
+		// http://localhost/generatepdf.php/?id=2
 		$row = $con->query('SELECT rok, rocnik, cislo FROM casopis WHERE id_casopisu = '. $_GET['id']);
 		$hlavicka = $row->fetch_array();
 		$hlavicka_string = $hlavicka['rok'] . ' | ' . 'ROCNIK ' . $hlavicka['rocnik'] . ' | ' . 'CISLO ' . $hlavicka['cislo'];
