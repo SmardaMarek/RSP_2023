@@ -53,12 +53,13 @@ $result1 = $con->query($sql1);
 <title>| Redaktor</title>
 </head>
 <body>
-   <center>
-   <div class="container">
-      <div>
-      <img src="./autor/text.png" alt="">
-   Jste přihlášen jako <b>redaktor</b>
-   <a href="../index.php">Odhlásit</a>
+    <center>
+<div class="container">
+      <div style="display: flex; flex-flow:row">
+   <img src="../images/text.png" alt="">
+   <div class="idk" style="display: flex; flex-flow:row; margin-top:auto; margin-bottom:auto">
+   <div style="margin-right: 5px; margin-top:8px">Jste přihlášen jako <b>autor</b></div>
+   <a  href="../index.php"><div class="logout">Odhlásit</div></a></div>
 </div>
     <hr>
     <br>

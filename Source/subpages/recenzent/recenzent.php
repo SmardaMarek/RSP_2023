@@ -19,11 +19,12 @@ $result = $con->query($sql);
 </head>
 <body>
 <center>
-   <div class="container">
-      <div>
-         <img src="../autor/text.png" alt="">
-   Jste přihlášen jako <b>recenzent</b>
-   <a href="../../index.php">Odhlásit</a>
+<div class="container">
+      <div style="display: flex; flex-flow:row">
+   <img src="../../images/text.png" alt="">
+   <div class="idk" style="display: flex; flex-flow:row; margin-top:auto; margin-bottom:auto">
+   <div style="margin-right: 5px; margin-top:8px">Jste přihlášen jako <b>recenzent</b></div>
+   <a  href="../../index.php"><div class="logout">Odhlásit</div></a></div>
 </div>
    <hr>
     <h1>Články k recenzi</h1>

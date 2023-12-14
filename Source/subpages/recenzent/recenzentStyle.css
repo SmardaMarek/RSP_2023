@@ -9,7 +9,11 @@ body {
     width: 1000px;
     margin: 0 auto;
 }
-
+a{
+    text-decoration: none;
+    color: #bc4242;
+    cursor: pointer;
+}
 
 img {
     width: 15%;
@@ -22,6 +26,7 @@ button {
     background-color: transparent;
     border-color: #bc4242;
     color: #bc4242;
+    cursor: pointer;
 }
 
 button:hover {
@@ -85,4 +90,14 @@ select {
     color: #bc4242;
     border-radius: 0.8em;
     border-color: #bc4242;
+}
+
+.logout{
+    border-color: #bc4242;
+    padding: 5px;
+   width: 70px;
+    border-style: solid;
+    border-radius: 0.8em;
+    /*margin-right: 950px;
+    font-size: smaller;*/
 }

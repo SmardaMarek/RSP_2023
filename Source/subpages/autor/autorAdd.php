@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./autorStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
+    <link rel="icon" type="image/x-icon" href="../../images/fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
     <title>| Autor - přidání článku</title>
@@ -55,10 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
    <center>
    <div class="container">
-      <div>
-   <img src="./text.png" alt="">
-   Jste přihlášen jako <b>autor</b>
-   <a  href="../../index.php">Odhlásit</a> <br>
+      <div style="display: flex; flex-flow:row">
+   <img src="../../images/text.png" alt="">
+   <div class="idk" style="display: flex; flex-flow:row; margin-top:auto; margin-bottom:auto">
+   <div style="margin-right: 5px; margin-top:5px">Jste přihlášen jako <b>autor</b></div>
+   <a  href="../../index.php"><div class="logout">Odhlásit</div></a></div>
 </div>
    <hr>
       <form method="post" enctype="multipart/form-data">
@@ -87,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          </div>
          <br>
          </div><br>
-         <a class="exit" onclick="history.back()">Zpět</a>
+         <a class="exit" onclick="history.back()"><div class="exit1">Zpět</div></a>
          <hr>
     <br>
     <div style="overflow-x:auto;">
