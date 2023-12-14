@@ -8,13 +8,13 @@ include 'connect.php';
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>| Login</title>
-  <link rel="icon" type="image/x-icon" href="../Source/subpages/recenzent/fav.png" class="fav">
+  <link rel="icon" type="image/x-icon" href="../Source/images/fav.png" class="fav">
   <link rel="stylesheet" href="loginPage/styleLogin.css" />
 </head>
 <body>
 <div class="back">
   <form name="input" action="" method="post">
-  <img src="loginPage/image/text.png" alt="" /><br />
+  <img src="./images/text.png" alt="" /><br />
    <input type="text" placeholder="Email" id="email" name="email" class="inputSize" />
   <input type="password" placeholder="Heslo" id="password" name="password" class="inputSize"/><br><br>
     <button type="submit" name="sub"/>Přihlásit</button>

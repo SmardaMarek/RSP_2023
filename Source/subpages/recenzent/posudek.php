@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="posudek.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
+    <link rel="icon" type="image/x-icon" href="../../images/fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
     <title>| Recenzent - posudek</title>
@@ -44,10 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <div class="container">
       <div>
-   <img src="./text.png" alt="">
+   <img src="../../images/text.png" alt="">
    Jste přihlášen jako <b>recenzent</b>
    <a  href="../../index.php">Odhlásit</a> <br>
-   <a class="exit" onclick="history.back()">Zpět</a>
 </div>
 <hr>
 <h1 class="text-center">Recenzní formulář</h1>

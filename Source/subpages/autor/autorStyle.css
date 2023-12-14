@@ -26,6 +26,7 @@ border-radius: 15em;
 background-color: transparent;
 border-color: #bc4242;
 color: #bc4242;
+cursor: pointer;
 }
 
 button:hover{
@@ -33,7 +34,7 @@ button:hover{
    color: white;
     }
 
-.add,.exit{
+.add{
     width: 150px;
     height: 35px;
     background-color: transparent;
@@ -43,13 +44,26 @@ button:hover{
     border-radius: 0.8em;
 }
 
-.exit{
+.exit1{
+    border-color: #bc4242;
+    padding: 5px;
+   width: 50px;
+    border-style: solid;
+    border-radius: 0.8em;
+    margin-right: 950px;
+    font-size: smaller;
+}
+
+
+
+/*.eexit{
     margin-right: 950px;
     margin-top: -50px;
     z-index: -1;
     width: 50px;
+    height: 100px;
 }
-
+*/
  .add:hover{
     border-color: gray;
     color:white;
@@ -136,6 +150,29 @@ input,textarea{
 textarea{
     margin-top: 5px;
 }
+
+a{
+    text-decoration: none;
+    color: #bc4242;
+    cursor: pointer;
+}
+
+.logout{
+    border-color: #bc4242;
+    padding: 5px;
+   width: 50px;
+    border-style: solid;
+    border-radius: 0.8em;
+    font-size: small;
+    /*margin-right: 950px;
+    font-size: smaller;*/
+}
+
+/*.posun{
+    padding-right: 450px;
+}/*
+
+
 
 
 
