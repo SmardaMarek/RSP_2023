@@ -43,20 +43,20 @@
                     <div class="red-line"> </div>
                 </div>
                 <div class="catalogs-years">
-                <div style="margin-inline: auto;"><a href="generatePDF.php/?id=10"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=11"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=12"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=13"><div class="catalogs-separate"> </div></a></div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
                 </div>
                 <div id="#year2023" class="text-box">
                     <div class="intro-text">Rok 2022</div>
                     <div class="red-line"> </div>
                 </div>
                 <div class="catalogs-years">
-                <div style="margin-inline: auto;"><a href="generatePDF.php/?id=7"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=8"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=6"><div class="catalogs-separate"> </div></a></div>
-                    <div style="margin-inline: auto;"><a href="generatePDF.php/?id=9"><div class="catalogs-separate"> </div></a></div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
+                    <div class="catalogs-separate"> </div>
                 </div>
             </div>
         </div>
