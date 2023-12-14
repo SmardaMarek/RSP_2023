@@ -1,3 +1,10 @@
+<?php
+include '../../connect.php';
+$id_uzivatele = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$sql = "SELECT p.*, (r.aktualnost + r.zajimavost_prinosnost + r.originalita + r.odborna_uroven + r.jazykova_a_stylova_uroven) / 5 as prumer_hodnoceni FROM prispevky p left join recenze r on p.id_prispevku = r.id_prispevku WHERE p.autor = '$id_uzivatele'";
+$result = $con->query($sql);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./autorStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/x-icon" href="../../images/fav.png" class="fav">
+    <link rel="icon" type="image/x-icon" href="fav.png" class="fav">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handjet:wght@300&family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
     <title>| Autor</title>
@@ -13,11 +20,11 @@
 <body>
    <center>
    <div class="container">
-      <div style="display: flex; flex-flow:row">
-   <img src="../../images/text.png" alt="">
-   <div class="idk" style="display: flex; flex-flow:row; margin-top:auto; margin-bottom:auto">
-   <div style="margin-right: 5px; margin-top:5px">Jste přihlášen jako <b>autor</b></div>
-   <a  href="../../index.php"><div class="logout">Odhlásit</div></a></div>
+      <div>
+   <img src="./text.png" alt="">
+   Jste přihlášen jako <b>autor</b>
+   <a  href="../../index.php">Odhlásit</a>
+   <br>
 </div>
    <hr>
     <h1>Mé příspěvky</h1>
@@ -25,46 +32,22 @@
     <br>
     <div style="overflow-x:auto;">
     <table>
+    <tr>
+        <th>Název</th>
+        <th>Téma</th>
+        <th>Text obsahu</th>
+        <th>Stav</th>
+        <th>Hodnocení</th>
+    </tr>
+    <?php foreach ($result as $row){ ?>
         <tr>
-           <th>Téma</th>
-           <th>Název</th>
-           <th>Článek</th>
-           <th>Stav</th>
-           <th>Vytvořeno dne</th>
-           <th>Recenze</th>
+            <td><?php echo $row['nazev']; ?></td>
+            <td><?php echo $row['tema']; ?></td>
+            <td><?php echo $row['obsah_text']; ?></td>
+            <td><?php echo $row['stav']; ?></td>
+            <td><?php echo round($row['prumer_hodnoceni'], 2); ?></td>
         </tr>
-        <tr>
-           <td>IT</td>
-           <td>Distribuce Linuxu</td>
-           <td><button>Zobrazit článek</button></td>
-           <td>K recenzi</td>
-           <td>2023-12-15</td>
-           <td>0</td>
-        </tr>
-        <tr>
-         <td>Ekonomie</td>
-         <td>Daně</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>K recenzi</td>
-         <td>2023-12-10</td>
-         <td>0</td>
-      </tr>
-      <tr>
-         <td>IT</td>
-         <td>JavaScript</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>Hodnoceno</td>
-         <td>2023-11-27</td>
-         <td>2</td>
-      </tr>
-      <tr>
-         <td>Cestovní ruch</td>
-         <td>Amerika a její tradice</td>
-         <td><button>Zobrazit článek</button></td>
-         <td>K recenzi</td>
-         <td>2023-12-20</td>
-         <td>0</td>
-      </tr>
+    <?php }; ?>
        </table>
        <a href="./autorAdd.php">
        <button class="add">Přidat článek</button>
@@ -73,14 +56,6 @@
    </div> 
    <br>
    <hr>
-   <h2>Téma</h2>
-   Vyberte téma, které chcete zobrazit: <br>
-   <select name="tema">
-      <option value="IT" selected="selected">IT</option>
-      <option value="CR">Cestovní ruch</option>
-      <option value="EK">Ekonomie</option>
-      </select>
-      <button>Zobraz</button>
 </center>
 </body>
 </html>
