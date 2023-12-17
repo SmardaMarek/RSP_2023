@@ -18,17 +18,17 @@
                 <div class="intro-text" style="margin-bottom: 20px;"> </div>
             </div>
             <div id="#sorting" class="sorting">
-                <div class="separate-sort-box">
-                    <div class="sort-text">Téma 1</div>
+                <div class="separate-sort-box" style="text-align:center; height: 75px;">
+                    <div class="sort-text"><a href="theme.php/?id=1" style="text-decoration: none;color: #bc4242;">Věda</a></div>
                 </div>
-                <div class="separate-sort-box">
-                    <div class="sort-text">Téma 2</div>
+                <div class="separate-sort-box" style="text-align:center; height: 75px;">
+                <div class="sort-text"><a href="theme.php/?id=2" style="text-decoration: none;color: #bc4242;">Technika</a></div>
                 </div>
-                <div class="separate-sort-box">
-                    <div class="sort-text">Téma 3</div>
+                <div class="separate-sort-box" style="text-align:center; height: 75px;">
+                <div class="sort-text"><a href="theme.php/?id=3" style="text-decoration: none;color: #bc4242; text-wrap:wrap;">Školní sportovní úspěchny</a></div>
                 </div>
-                <div class="separate-sort-box">
-                    <div class="sort-text">Téma 4</div>
+                <div class="separate-sort-box" style="text-align:center; height: 75px;">
+                <div class="sort-text"><a href="theme.php/?id=4" style="text-decoration: none;color: #bc4242; text-wrap:wrap;">Pomoc prvákům</a></div>
                 </div>
             </div>
             <div class="catalogs-all">
